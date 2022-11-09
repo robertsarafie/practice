@@ -1,0 +1,149 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+/* font-family: 'Big Shoulders Display', cursive; */
+/* font-family: 'Lexend Deca', sans-serif; */
+/* fonts */
+
+/* colors */
+/* ### Primary */
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+/* ### Neutral */
+
+  --paragraphs: hsla(0, 0%, 100%, 0.75);
+  --background-buttons-headings: hsl(0, 0%, 95%);
+}
+/* colors */
+
+body {
+  background-color: var(--background-buttons-headings);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-radius: 12px;
+  margin: 2rem;
+  overflow: hidden;
+  box-shadow: 0px 0px 23px 6px rgba(0,0,0,0.3);
+}
+
+.box1 {
+  background-color: var(--bright-orange);
+  overflow: hidden;
+}
+
+.box2 {
+  background-color: var(--dark-cyan);
+  overflow: hidden;
+}
+
+.box3 {
+  background-color: var(--very-dark-cyan);
+  overflow: hidden;
+}
+
+.box {
+  padding: 40px;
+}
+
+.box h2 {
+  font-family: 'Big Shoulders Display', cursive;
+  text-transform: uppercase;
+  color: var(--background-buttons-headings);
+  font-size: 35px;
+}
+
+.box p {
+  color: var(--paragraphs);
+  line-height: 1.6;
+}
+
+.box a {
+  text-decoration: none;
+  background-color: var(--background-buttons-headings);
+  padding: 13px 27px;
+  border-radius: 26px;
+  margin-top: 60px;
+  display: inline-block;
+  border: 2px solid hsl(0, 0%, 95%);
+  transition: color 0.3s ease;
+}
+
+.box1 a {
+  color: var(--bright-orange);
+}
+
+.box2 a {
+  color: var(--dark-cyan);
+}
+
+.box3 a {
+  color: var(--very-dark-cyan);
+}
+
+.box a:hover {
+  color: var(--background-buttons-headings);
+  background: transparent;
+}
+
+.box img {
+  animation: spin_cars 6s infinite;
+}
+
+@keyframes spin_cars {
+  0% {
+    transform: translateX(-200%);
+  }
+
+  10% {
+    transform: translateX(-50%);
+  }
+
+  25% {
+    transform: translateX(112%);
+  }
+
+  50% {
+    transform: translateX(112%);
+  }
+
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+.box i {
+  color: var(--background-buttons-headings);
+  font-size: 50px;
+  position: absolute;
+  margin: 0 80px;
+}
+
+@media only screen and (max-width:768px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width:425px) {
+  .wrapper {
+    margin: 2rem .5rem;
+  }
+}
