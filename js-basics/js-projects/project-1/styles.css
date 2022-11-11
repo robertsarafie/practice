@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #FFE9B1;
+}
+
+.emoji {
+  font-size: 10rem;
+  cursor: pointer;
+  user-select: none;
+  margin-bottom: 1rem;
+}
+
+
+@keyframes zoomIn {
+  100% {
+      transform: scale(1.16, 1.16);
+  }
+}
+
+.closed {
+  display: none;
+  animation: zoomIn .5s cubic-bezier(0.47, 0, 0.75, 0.72) infinite alternate;
+}
+
+.open {
+  display: none;
+  animation: zoomIn .5s cubic-bezier(0.47, 0, 0.75, 0.72) infinite alternate;
+}
+
+.active {
+  display: block;
+}
+
+.shadow {
+  background-color: gray;
+  opacity: 0.2;
+  height: 20px;
+  width: 60%;
+  border-radius: 50%;
+  animation: shrink .5s cubic-bezier(0.47, 0, 0.75, 0.72) infinite alternate;
+  margin: 0 auto;
+}
+
+@keyframes shrink {
+  100% {
+    transform: scale(1.16, 1.16);
+}
+}
+
+.ballons {
+  height: 50px;
+  background-repeat: repeat-y;
+}
