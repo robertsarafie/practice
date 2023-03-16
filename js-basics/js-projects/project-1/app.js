@@ -1,6 +1,5 @@
 const closedFace = document.querySelector('.closed');
 const openFace = document.querySelector('.open');
-const ballonsJS = document.querySelector('.ballons');
 
 // Add event listener
 closedFace.addEventListener('click', () => {
